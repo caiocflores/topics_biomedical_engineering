@@ -1,0 +1,12 @@
+Source: record fantasia/f2y02
+val has 3 rows (signals) and 1000000 columns (samples/signal)
+Duration:    50:03
+Sampling frequency: 333 Hz  Sampling interval: 0.003003003003 sec
+Row	Signal	Gain	Base	Units
+1	RESP	819.2	0	mV
+2	ECG	819.2	0	mV
+3	BP	819.2	0	mV
+
+To convert from raw units to the physical units shown
+above, call the 'rdmat.m' function from the wfdb-matlab
+toolbox: https://physionet.org/physiotools/matlab/wfdb-app-matlab/

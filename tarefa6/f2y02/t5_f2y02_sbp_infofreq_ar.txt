@@ -1,0 +1,21 @@
+	Total	VLF	LF	HF	LF/HF
+a.a.	0.00056887	0.00029272	0.00022513	5.1016e-05	4.4128
+r.a.	100	51.457	39.575	8.968	4.4128
+n.a.	1		81.5254	18.4746	4.4128
+
+Frequency-Domain Analysis of SBP
+fs (Hz)	4
+Method	AR model
+# of Pts	2048
+Window	----
+Welch method samples per segment	----
+Welch method overlapping samples	----
+AR order	20
+
+Legends
+VLF	Very low frequency (0-0.04 Hz)
+LF	Low frequency (0.04-0.15 Hz)
+HF	High frequency (0.15-0.4 Hz)
+a.a.	absolute area (mmHg²)
+r.a.	relative area (%)
+n.a.	normalized area (n.u.)

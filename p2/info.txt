@@ -1,0 +1,8 @@
+INFORMAÇÕES IMPORTANTES PARA PROVA 2: 
+
+fft (lista 5)
+projetos de filtro (aula 12) --> obs: normalized by (fs/2)
+janelamento
+parseval
+coerencia
+transfer function

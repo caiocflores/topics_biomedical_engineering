@@ -1,0 +1,21 @@
+	Total	VLF	LF	HF	LF/HF
+a.a.	3190.153	1176.5652	386.1675	1627.4203	0.2373
+r.a.	100	36.881	12.105	51.014	0.2373
+n.a.	1		19.1781	80.8219	0.2373
+
+Frequency-Domain Analysis of RRI
+fs (Hz)	4
+Method	Fourier
+# of Pts	2048
+Window	Hanning
+Welch method samples per segment	----
+Welch method overlapping samples	----
+AR order	----
+
+Legends
+VLF	Very low frequency (0-0.04 Hz)
+LF	Low frequency (0.04-0.15 Hz)
+HF	High frequency (0.15-0.4 Hz)
+a.a.	absolute area (ms²)
+r.a.	relative area (%)
+n.a.	normalized area (n.u.)

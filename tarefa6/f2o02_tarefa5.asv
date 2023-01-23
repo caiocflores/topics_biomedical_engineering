@@ -1,0 +1,60 @@
+%% data preprocessing
+clc; clear all; close all; 
+warning('off');
+
+% obs.: only 60 Hz filter
+
+% subject f2o02 - PhysioBankATM
+load f2o02m.mat;
+fs2 = 250; % Hz
+ts2 = 1/fs2;
+
+% ECG
+ecg = val(2,:);
+base = 0; gain = 409.6; ecg = (ecg-base)./gain;
+
+% BP
+bp = val(3,:);
+base = 0; gain = 409.6; bp =(bp-base)./gain; 
+
+% TIME CONVERSOR
+% time vector for 5 min = 300 sec
+% downloaded 1h of data from PhysioNet
+tts = (60*60); % 1h00
+tts_5min = (5*60);
+n_points = length(ecg); % == length(bp) -> verified
+
+% POINTS CONVERSOR
+% to calculate the number of points in 300sec
+% proportion:
+% tts -- n_points
+% 300 -- n_points_5min
+n_points_5min = ((n_points*tts_5min)-1)/tts;
+
+t_points = ((7*n_points_5min:8*n_points_5min) * ts2); % time vector
+
+%% ECG plot
+% ECG during 300 seconds
+ecg = ecg(7*n_points_5min:8*n_points_5min); % 2100 - 2400 seg
+
+% uncomment to see the plot if necessary
+% figure(1);
+% plot(t_points, ecg, 'r'); grid;
+% xlabel('Tempo (s)');
+% ylabel('ECG (mV)');
+% title('f2o02 - ECG x Tempo');
+
+%% BP plot
+% BP during 300 seconds
+bp = bp(7*n_points_5min:8*n_points_5min); % 2100 - 2400 seg
+
+% uncomment to see the plot if necessary
+% figure(2);
+% plot(t_points, bp, 'b'); grid;
+% xlabel('Tempo (s)');
+% ylabel('BP (mV)');
+% title('f2o02 - BP x Tempo');
+
+%% Transfer Function 
+load t5_f2o02.mat % load of patient file - CRSIDLab
+open('patient')
